@@ -7,12 +7,12 @@ from config.db import conn
 
 routes = APIRouter()
 
-@routes.get('/probando/${text}')
-def getTest(text: testFile):
-    print(text["name"])
+@routes.post('/probando')
+def postTest(text: testFile):
+    print(text.name)
     return 'ok'
 
-@routes.post('/probando')
-def postTest():
+@routes.get('/probando')
+def getTest():
     print('Hola mundo2')
     return 'ok'
