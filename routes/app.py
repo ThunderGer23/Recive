@@ -7,7 +7,7 @@ from config.db import conn
 routes = APIRouter()
 
 @routes.get('/probando/${text}')
-def getTest(text: list[str]):
+def getTest(text: list):
     for i in text:
         print(i)
     return 'ok'
