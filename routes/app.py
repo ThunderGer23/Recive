@@ -9,7 +9,7 @@ routes = APIRouter()
 
 @routes.post('/probando')
 def postTest(text: testFile):
-    print(text.name)
+    print(text.id)
     return 'ok'
 
 @routes.get('/probando')
