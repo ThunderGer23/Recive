@@ -7,9 +7,8 @@ from config.db import conn
 routes = APIRouter()
 
 @routes.get('/probando/${text}')
-def getTest(text):
-    for i in text:
-        print(i)
+def getTest(text: dict):
+    print(text["name"])
     return 'ok'
 
 @routes.post('/probando')
