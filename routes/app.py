@@ -6,7 +6,7 @@ from config.db import conn
 
 routes = APIRouter()
 
-@routes.get('/probando')
+@routes.get('/probando/${text}')
 def getTest(text: str):
     print(text)
     return 'ok'
