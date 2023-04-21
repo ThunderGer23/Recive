@@ -1,6 +1,5 @@
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel
 
 class testFile(BaseModel):
-    id: Optional[list]
-    name: str
+    id: List[str]
