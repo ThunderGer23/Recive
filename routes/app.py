@@ -9,14 +9,14 @@ routes = APIRouter()
 
 @routes.post('/probando')
 def postTest(text: testFile):
-    print(text.id)
+    filesave = []
     for i in text.id:
-    # filesave = []
         file = conn.local.files.find_one({"_id": ObjectId(i)})
-        print(file)
-    # filesave.append(filename)
-    # with open(f'./document/{filename}', 'wb') as f:
-    #         f.write(filebyte)
+        fname = file["name"]
+        filesave.append(fname)
+        with open(f'./document/{fname}', 'wb') as f:
+            f.write(file["data"])
+    print(filesave)
     return 'ok'
 
 @routes.get('/probando')
